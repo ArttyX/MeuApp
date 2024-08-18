@@ -8,7 +8,7 @@ interface SectionProps {
   containerStyle?: ViewStyle;
 }
 
-function Section({ imageSource, text, imageStyle, textStyle, containerStyle }: SectionProps) {
+export default function Section({ imageSource, text, imageStyle, textStyle, containerStyle }: SectionProps) {
   return (
     <View style={[styles.container, containerStyle]}>
       <Image source={imageSource} style={[styles.image, imageStyle]} />
@@ -36,4 +36,3 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Section;
