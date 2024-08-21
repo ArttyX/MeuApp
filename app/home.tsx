@@ -14,7 +14,7 @@ export default function Home() {
     <ScrollView contentContainerStyle={styles.container}>
             <Section
             imageSource={require('../assets/images/Knight.png') }
-            text="O cavaleiro é a classe meias comum dos RPGs, simples porém eficiente em combater os inimigos e se manter na linha de frente!"
+            text="O cavaleiro é a classe mais comum dos RPGs, simples porém eficiente em combater os inimigos e se manter na linha de frente!"
             />
             <Section
             imageSource={require('../assets/images/Ranger.png')}
