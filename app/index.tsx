@@ -1,9 +1,11 @@
-import { View, Text, Image, StyleSheet } from "react-native";
-import { router } from "expo-router";
-import StyledButton from "../components/button";
-import StyledInput from "../components/input";
-import { StatusBar } from "expo-status-bar";
-import React from "react";
+import { View, Image, StyleSheet } from "react-native"
+import { router } from "expo-router"
+import StyledButton from "../components/button"
+import StyledInput from "../components/input"
+import { StatusBar } from "expo-status-bar"
+import React from "react"
+import { Button, ButtonText } from "@/components/ui/button"
+import { Text } from "@/components/ui/text"
 
 const handleLogin = () => {
     router.replace('home');
@@ -16,7 +18,7 @@ export default function Login() {
                 source={require('../assets/images/D20.png')}
                 style={styles.logo}
             />
-            <Text style={styles.title}>RPG Classes Overview</Text>
+            <Text style={styles.title} bold={true}>RPG Classes Overview</Text>
             <StyledInput
                 placeholder="E-mail"
                 onChangeText={(text) => console.log(text)}
@@ -25,11 +27,10 @@ export default function Login() {
                 placeholder="Senha"
                 onChangeText={(text) => console.log(text)}
             />
-            <StyledButton
-                text="Acessar o App"
-                onClick={handleLogin}
-                color='red'
-            />
+            <Button size='md' variant='solid' onPress={handleLogin} className='bg-red-500'>
+                <ButtonText>Login</ButtonText>
+            </Button>     
+            {/*<StyledButton text="Voltar ao Login" onClick={handleLogin} color='red'></StyledButton>*/}
             <StatusBar style='auto' />
         </View>
     );
