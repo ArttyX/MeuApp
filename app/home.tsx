@@ -25,9 +25,11 @@ export default function Home() {
             text="O mago é uma classe complexa para mentes criativas. Compensa a falta de atributos físicos com mágias poderosas e com muita utilidade na maioria dos cenários!"
             />
     </ScrollView>
-            <StyledButton text="Voltar ao Login" onClick={handleLogin} color='red'></StyledButton>
-            <StatusBar style="auto" 
-            />
+           { /*<StyledButton text="Voltar ao Login" onClick={handleLogin} color='red'></StyledButton>
+            <StatusBar style="auto" />*/}
+            <Button size='md' variant='solid' onPress={handleLogin} className='bg-red-500'>
+            <ButtonText>Voltar</ButtonText>
+            </Button>     
         </>
     );
 }
